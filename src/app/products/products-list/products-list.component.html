@@ -1,0 +1,17 @@
+<p>products-list</p>
+<div *ngIf="productsList.length > 0">
+  <table>
+    <tr>
+      <td>Title </td>
+      <td>Price</td>
+      <td>Category</td>
+      <td>Action</td>
+    </tr>
+    <tr *ngFor="let product of productsList">
+      <td>{{product.title}} </td>
+      <td>{{product.price}}</td>
+      <td>{{product.category}}</td>
+      <td><button (click)="getProductDetails(product.id)">Details</button></td>
+    </tr>
+  </table>
+</div>
